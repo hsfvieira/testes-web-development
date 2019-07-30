@@ -1,6 +1,6 @@
 # testes-web-development
 
-### Arquivo para armazenar todos os testes e estudos sobre Desenvolviment Web, com **pouca organização**.
+### Repositório para armazenar todos os testes e estudos sobre Desenvolviment Web, com **pouca organização**.
 
 ## Tópicos estudados:
 
