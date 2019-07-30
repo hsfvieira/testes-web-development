@@ -1,0 +1,15 @@
+table {
+    margin: 0 auto;
+}
+
+input, button, table th{
+    font-family: sans-serif;
+    border: none;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+button {
+    background-color: white;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        input, button {
+            background-color: #555;
+            border: 1px solid #888;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: white !important;
+            transition: border-color 0.5s;
+        }
+
+        input:not(:focus) {
+            border-color: #888  ;
+            transition: border-color 0.5s;
+        }
+
+        button:hover {
+            box-shadow: 0 0 10px black;
+            transition: box-shadow 0.5s;
+        }
+
+        button:not(:hover) {
+            box-shadow: none;
+            transition: box-shadow 0.5s;
+        }
+
+        .alerta {
+            border-color: red !important;
+            transition: border-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST" action="#" id="formulario">
+        <input type="text">
+        <button type="submit" id="botao">Enviar</button>
+    </form>
+
+    <script>
+        const form = document.getElementById("formulario")
+
+        form.addEventListener("submit", function(evento) {
+            evento.preventDefault()
+
+            for(let i = 0; i < this.elements.length; i++) {
+                let item = this.elements[i]
+                if(item.type !== "submit") {
+                    if(item.value == "") {
+                        console.log(item)
+                        item.classList.add("alerta")
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

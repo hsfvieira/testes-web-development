@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>JavaScript Tutorial</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h3 id="teste">MadLib Generator</h3>
+            <form class="form-inline">
+                <input type="text" class="form-control" id="i0" value="Person">
+                <input type="text" class="form-control" id="i1" value="Noun">
+                <input type="text" class="form-control" id="i2" value="Verb">
+                <input type="text" class="form-control" id="i3" value="Verb">
+                <input type="text" class="form-control" id="i4" value="Verb">
+                <input type="text" class="form-control" id="i6" value="Plural Verb">
+                <input type="text" class="form-control" id="i7" value="Verb">
+                <input type="text" class="form-control" id="i8" value="Adjective">
+                <input type="text" class="form-control" id="i9" value="Noun">
+                <input type="text" class="form-control" id="i10" value="Event">
+                <input type="text" class="form-control" id="i11" value="Noun">
+                <input type="text" class="form-control" id="i12" value="Body Part">
+                <input type="text" class="form-control" id="i13" value="Noun">
+            </form><br><br>
+            <button type="submit" class="btn-lg" onClick="alert('Hello')">Hello</button>
+            <button type="submit" class="btn-lg" onClick="calcPI(1000000)">Get PI</button>
+            <button type="submit" class="btn-lg" onClick="getFibList(20)">Get Fibs</button>
+            <button type="submit" class="btn-lg" onClick="madLibGenerator()">MadLib Generate</button>
+            <br><br>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Output</span>
+                </div>
+                <textarea id="output1" rows="18" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/popper.js/popper.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

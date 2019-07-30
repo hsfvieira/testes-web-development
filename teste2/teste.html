@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background-color: black;
+        }
+
+        input {
+            margin-top: 20px;
+            border: none;
+            border-bottom: 3px solid white;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: red;
+            transition: border-color 0.2s;
+        }
+
+        input:not(:focus) {
+            border-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input::placeholder {
+            font-size: 14px;
+            color: white;
+        }
+
+        input:focus::placeholder {
+            opacity: 0; 
+            transition: opacity 0.2s;
+        }
+
+        input:not(:focus)::placeholder {
+            opacity: 1;
+            transition: opacity 0.2s;
+        }
+
+        button {
+            outline: none;
+            padding: 10px 30px; 
+            border: 2px solid rgb(200, 0, 0);
+            border-radius: 5px;
+            background-color: black;
+            color: rgb(200, 0, 0);
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: bolder;
+        }
+
+        button:hover {
+            background-color: rgb(200, 0, 0);
+            color: white;
+            transition: all 0.2s;
+        }
+
+        button:not(:hover) {
+            background-color: black;
+            color: rgb(200, 0, 0);
+            transition: all 0.2s;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="texto" placeholder="Nome do Usuário">
+    </div>
+    <br><br>   
+    <button>Entrar</button>
+</body>
+</html>

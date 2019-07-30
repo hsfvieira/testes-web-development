@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select id="lista">
+        <option value="1">Teste</option>
+        <option value="2">Teste 2</option>
+    </select>
+
+    <script>
+        document.getElementById("lista").addEventListener("change", function() {
+            console.log(this.options[this.selectedIndex].text)
+        })
+    </script>
+</body>
+</html>

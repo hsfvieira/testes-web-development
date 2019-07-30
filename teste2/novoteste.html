@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @font-face {
+            src: url("./DarkerGrotesque-Regular.ttf");
+            font-family: darkerGrotesque;
+        }
+
+        body {
+            background-color: #444;
+        }
+
+        input {
+            outline: none;
+            border: none;
+            background-color: transparent;
+            padding: 10px;
+            font-size: 18px;
+            font-family: darkerGrotesque;
+            color: #aaa;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        .text {
+            border-bottom: 1px solid #aaa;
+        }
+
+        .button {
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+            transition: color 0.2s;
+        }
+
+        input:not(:focus)::placeholder {
+            color: #aaa;
+            transition: color 0.2s;
+        }
+
+        .button:hover {
+            background-color: #aaa;
+            color: #444;
+            transition: all 0.2s;
+        }
+
+        .button:not(:hover) {
+            background-color: transparent;
+            color: #aaa;
+            transition: all 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" class="text" placeholder="E-Mail">
+        <input type="text" class="text" placeholder="Senha">
+        <input type="submit" value="Enviar" class="button">
+    </form>
+</body>
+</html>

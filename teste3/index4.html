@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="teste"></div>
+
+    <script>
+        /*
+        function download(data, filename, type) {
+            let file = new Blob([data], {type: type})
+            let a = document.createElement("a"),
+                url = URL.createObjectURL(file)
+            a.href = url
+            a.download = filename
+            document.body.appendChild(a)
+            a.click()
+            setTimeout(function() {
+                document.body.removeChild(a)
+                window.URL.revokeObjectURL(url)
+            }, 0)
+        }*/
+
+        let dados = 0
+
+        function lerDados() {
+            let ajax = new XMLHttpRequest()
+            ajax.open("GET", "teste.json")
+            ajax.onload = function() {
+                document.getElementById("teste").innerText = ajax.responseText
+                dados = JSON.parse(ajax.responseText)
+            }
+            ajax.send()
+        }
+        function download(data, filename, type) {
+            let file = new Blob([data], {type: type})
+            let a = document.createElement("a"),
+                url = URL.createObjectURL(file)
+            a.href = url
+            a.download = filename
+            a.click()
+        }
+
+        lerDados()
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste 03</title>
+</head>
+<body>
+    <div id="dados"></div>
+    <script>
+        function executar(inf) {
+            let dados = JSON.parse(inf.responseText)
+            for(i = 0; i < dados.length; i++) {
+                document.getElementById("dados").innerHTML += `${dados[i].nome} ${dados[i].sobrenome}<br>`
+            }
+        }
+
+        function pegarInformacao(teste) {
+            let xhr = new XMLHttpRequest()
+            xhr.open("GET", "conteudo.php")
+            xhr.onload = function() {
+                if(xhr.status == 200) {
+                    teste(xhr)
+                } else {
+                    return false
+                }
+            }
+            xhr.send()
+        }
+
+        pegarInformacao(executar)   
+    </script>
+</body>
+</html>
